@@ -311,18 +311,18 @@ crt = [
 ]
 for instruction in instructions.split('\n'):
     if instruction.startswith('noop'):
-        if c%40 in [x - 1, x, x + 1]:
+        if c % 40 in [x - 1, x, x + 1]:
             crt[c // 40][c % 40] = '#'
         c += 1
         if c in it:
             s += c * x
     else:
-        if c%40 in [x - 1, x, x + 1]:
+        if c % 40 in [x - 1, x, x + 1]:
             crt[c // 40][c % 40] = '#'
         c += 1
         if c in it:
             s += c * x
-        if c%40 in [x - 1, x, x + 1]:
+        if c % 40 in [x - 1, x, x + 1]:
             crt[c // 40][c % 40] = '#'
         c += 1
         if c in it:
