@@ -60,8 +60,12 @@ def bfs(_map, start):
         if cc == 'S':
             cc = 'a'
         for x, y in ((cx + 1, cy), (cx - 1, cy), (cx, cy + 1), (cx, cy - 1)):
-            if 0 <= x < x_len and 0 <= y < y_len and _map[y][x] not in seen and ord(cc) + 1 >= ord(
-                    _map[y][x][2] if _map[y][x][2] != 'E' else 'z'):
+            if (
+                    0 <= x < x_len
+                    and 0 <= y < y_len
+                    and _map[y][x] not in seen
+                    and ord(cc) + 1 >= ord(_map[y][x][2] if _map[y][x][2] != 'E' else 'z')
+            ):
                 queue.append(path + [_map[y][x]])
                 seen.add((_map[y][x]))
 
